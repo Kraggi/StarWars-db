@@ -1,7 +1,6 @@
 import React from 'react';
 import './itemList.css';
 import PersonDetails from '../person-details/personDetails';
-import PlanetDetails from '../planet-details/planetDetails';
 function ItemList() {
   return (
     <div className='list'>
@@ -21,7 +20,7 @@ function ItemList() {
               Porta ac consectetur ac
             </a>
           </ul>
-          <PlanetDetails />
+          <PersonDetails />
         </div>
       </div>
     </div>
