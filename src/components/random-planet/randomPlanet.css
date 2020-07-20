@@ -1,0 +1,32 @@
+.randomPlanet {
+  margin-top: 20px;
+}
+.randomPlanet_inner {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.planet_img {
+  max-width: 200px;
+  max-height: 200px;
+  border-radius: 10px;
+  margin-right: 30px;
+}
+
+.planet_info {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.planet_param {
+  margin-top: 10px;
+  font-size: 18px;
+}
+
+.lined {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
