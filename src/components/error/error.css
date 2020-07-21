@@ -1,0 +1,17 @@
+.error {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: rgb(211, 146, 71);
+  width: 100%;
+}
+
+.error p {
+  margin: 0;
+}
+
+.error img {
+  max-width: 100px;
+  max-height: 100px;
+}
