@@ -5,9 +5,9 @@ import Spinner from '../spinner/spinner';
 import Error from '../error/error';
 
 class RandomPlanet extends React.Component {
-  constructor() {
-    super();
+  componentDidMount() {
     this.updatePlanet();
+    setInterval(() => this.updatePlanet(), 5000);
   }
 
   swapiService = new SwapiService();
@@ -25,13 +25,13 @@ class RandomPlanet extends React.Component {
   onPlanetLoaded = planet => {
     this.setState({ planet, loading: false });
   };
-  updatePlanet() {
+  updatePlanet = () => {
     const id = Math.floor(Math.random() * 18) + 2;
     this.swapiService
       .getPlanet(id)
       .then(this.onPlanetLoaded)
       .catch(this.onError);
-  }
+  };
 
   render() {
     const { planet, loading, error } = this.state;
