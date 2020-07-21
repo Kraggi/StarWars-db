@@ -1,4 +1,5 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 import './header.css';
 
 const Header = () => {
@@ -12,13 +13,13 @@ const Header = () => {
           <nav className='menu'>
             <ul className='menu_list'>
               <li className='menu_item'>
-                <a href='#'>People</a>
+                <NavLink to='/persons'>People</NavLink>
               </li>
               <li className='menu_item'>
-                <a href='#'>Planets</a>
+                <NavLink to='/planets'>Planets</NavLink>
               </li>
               <li className='menu_item'>
-                <a href='#'>Starships</a>
+                <NavLink to='/starships'>Starships</NavLink>
               </li>
             </ul>
           </nav>

@@ -1,5 +1,5 @@
 .planetDetails {
-  width: 50%;
+  margin-top: 15px;
 }
 .planetDetails_inner {
   display: flex;

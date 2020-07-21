@@ -1,0 +1,32 @@
+.starshipDetails {
+  margin-top: 15px;
+}
+.starshipDetails_inner {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  border-radius: 10px;
+}
+.starship_img {
+  width: 100%;
+  border-radius: 10px;
+  margin-right: 30px;
+}
+
+.starship_info {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.starship_param {
+  margin-top: 10px;
+  font-size: 18px;
+}
+
+.lined {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}

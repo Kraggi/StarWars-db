@@ -1,7 +1,10 @@
 import React from 'react';
+import { Route } from 'react-router-dom';
 import PersonDetails from '../person-details/personDetails';
 import ItemList from '../item-list/itemList';
 import './peoplePage.css';
+import PlanetDetails from '../planet-details/planetDetails';
+import StarshipDetails from '../starship-details/starshipDetails';
 function PeoplePage(props) {
   return (
     <div className='people_page'>
@@ -14,7 +17,15 @@ function PeoplePage(props) {
             />
           </div>
           <div className='col-lg-6 col-md-12'>
-            <PersonDetails personId={props.personId} />
+            <Route path='/persons'>
+              <PersonDetails personId={props.personId} />
+            </Route>
+            <Route path='/planets'>
+              <PlanetDetails planetId={props.planetId} />
+            </Route>
+            <Route path='/starships'>
+              <StarshipDetails starshipId={props.starshipId} />
+            </Route>
           </div>
         </div>
       </div>

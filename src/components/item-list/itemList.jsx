@@ -1,7 +1,5 @@
 import React from 'react';
 import './itemList.css';
-import PersonDetails from '../person-details/personDetails';
-import SwapiService from '../../services/swapi-servise';
 import Spinner from '../spinner/spinner';
 
 class ItemList extends React.Component {

@@ -1,6 +1,7 @@
 import React from 'react';
-import './personDetails.css';
 import SwapiService from '../../services/swapi-servise';
+import './personDetails.css';
+import Spinner from '../spinner/spinner';
 
 class PersonDetails extends React.Component {
   swapiService = new SwapiService();
@@ -29,9 +30,10 @@ class PersonDetails extends React.Component {
 
   render() {
     if (!this.state.person) {
-      return <span>Select person from list</span>;
+      return <Spinner />;
     }
     const { id, name, gender, birthYear, eyeColor } = this.state.person;
+    console.log(this.state);
     return (
       <div className='personDetails'>
         <div className='personDetails_inner row'>
@@ -42,7 +44,7 @@ class PersonDetails extends React.Component {
               alt='person'
             />
           </div>
-          <div className='person_info  col-md-6 col-sm-12 '>
+          <div className='person_info  col-md-6 col-sm-12'>
             <div className='person_name'>
               <h2>{name}</h2>
             </div>
