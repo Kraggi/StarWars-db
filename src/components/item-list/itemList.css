@@ -1,15 +1,8 @@
 .list {
-  display: flex;
-  margin-top: 20px;
-}
-
-.list_inner {
-  display: flex;
-  justify-content: space-between;
+  min-width: 50%;
 }
 
 .list-group {
   font-size: 22px;
-  width: 50%;
   margin-right: 20px;
 }

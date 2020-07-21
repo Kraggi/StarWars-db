@@ -40,11 +40,8 @@ class ItemList extends React.Component {
     const items = this.renderItems(peopleList);
     return (
       <div className='list'>
-        <div className='container'>
-          <div className='list_inner'>
-            <ul className='list-group'>{items}</ul>
-            <PersonDetails personId={this.props.personId} />
-          </div>
+        <div className='list_inner'>
+          <ul className='list-group'>{items}</ul>
         </div>
       </div>
     );

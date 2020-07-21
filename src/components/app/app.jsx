@@ -2,6 +2,7 @@ import React from 'react';
 import Header from '../header/header';
 import RandomPlanet from '../random-planet/randomPlanet';
 import ItemList from '../item-list/itemList';
+import PeoplePage from '../people-page/peoplePage';
 
 class App extends React.Component {
   state = {
@@ -15,7 +16,7 @@ class App extends React.Component {
       <>
         <Header />
         <RandomPlanet />
-        <ItemList
+        <PeoplePage
           onItemSelected={this.onPersonSelected}
           personId={this.state.selectedPerson}
         />
