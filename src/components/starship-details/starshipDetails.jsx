@@ -41,7 +41,6 @@ class StarshipDetails extends React.Component {
       passengers,
       cargoCapacity,
     } = this.state.starship;
-    console.log(this.state);
 
     return (
       <div className='starshipDetails'>
