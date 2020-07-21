@@ -43,7 +43,7 @@ class ItemList extends React.Component {
         <div className='container'>
           <div className='list_inner'>
             <ul className='list-group'>{items}</ul>
-            <PersonDetails />
+            <PersonDetails personId={this.props.personId} />
           </div>
         </div>
       </div>

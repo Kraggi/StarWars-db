@@ -5,7 +5,7 @@ import ItemList from '../item-list/itemList';
 
 class App extends React.Component {
   state = {
-    selectedPerson: null,
+    selectedPerson: 11,
   };
   onPersonSelected = id => {
     this.setState({ selectedPerson: id });
@@ -15,7 +15,10 @@ class App extends React.Component {
       <>
         <Header />
         <RandomPlanet />
-        <ItemList onItemSelected={this.onPersonSelected} />
+        <ItemList
+          onItemSelected={this.onPersonSelected}
+          personId={this.state.selectedPerson}
+        />
       </>
     );
   }

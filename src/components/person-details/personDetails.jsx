@@ -1,31 +1,59 @@
 import React from 'react';
 import './personDetails.css';
-function PersonDetails() {
-  return (
-    <div className='personDetails'>
-      <div className='personDetails_inner'>
-        <img
-          className='person_img'
-          src='https://starwars-visualguide.com/assets/img/characters/2.jpg'
-          alt='person'
-        />
-        <div className='person_info'>
-          <div className='person_name'>
-            <h2>Person Name</h2>
-          </div>
-          <div className='person_param'>
-            <p className='person_birth-year lined'>Birth year: 19BBY</p>
-            <p className='person_gender lined'>Gender: Male</p>
-            <p className='person_height lined'>Height: 172</p>
-            <p className='person_mass lined'>Mass: 77</p>
-            <p className='person_hair-color lined'>Hair color: Blond</p>
-            <p className='person_skin-color lined'>Skin color: Fair</p>
-            <p className='person_eye-color lined'>Eye color: Blue</p>
+import SwapiService from '../../services/swapi-servise';
+
+class PersonDetails extends React.Component {
+  swapiService = new SwapiService();
+
+  state = {
+    person: null,
+  };
+
+  componentDidMount() {
+    this.updatePerson();
+  }
+  componentDidUpdate(prevProps) {
+    if (this.props.personId !== prevProps.personId) {
+      this.updatePerson();
+    }
+  }
+  updatePerson() {
+    const { personId } = this.props;
+    if (!personId) {
+      return;
+    }
+    this.swapiService.getPerson(personId).then(person => {
+      this.setState({ person });
+    });
+  }
+
+  render() {
+    if (!this.state.person) {
+      return <span>Select person from list</span>;
+    }
+    const { id, name, gender, birthYear, eyeColor } = this.state.person;
+    return (
+      <div className='personDetails'>
+        <div className='personDetails_inner'>
+          <img
+            className='person_img'
+            src={`https://starwars-visualguide.com/assets/img/characters/${id}.jpg`}
+            alt='person'
+          />
+          <div className='person_info'>
+            <div className='person_name'>
+              <h2>{name}</h2>
+            </div>
+            <div className='person_param'>
+              <p className='person_birth-year lined'>Birth year: {birthYear}</p>
+              <p className='person_gender lined'>Gender: {gender}</p>
+              <p className='person_eye-color lined'>Eye color: {eyeColor}</p>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  );
+    );
+  }
 }
 
 export default PersonDetails;
