@@ -34,13 +34,15 @@ class PersonDetails extends React.Component {
     const { id, name, gender, birthYear, eyeColor } = this.state.person;
     return (
       <div className='personDetails'>
-        <div className='personDetails_inner'>
-          <img
-            className='person_img'
-            src={`https://starwars-visualguide.com/assets/img/characters/${id}.jpg`}
-            alt='person'
-          />
-          <div className='person_info'>
+        <div className='personDetails_inner row'>
+          <div className='col-md-6 col-sm-12'>
+            <img
+              className='person_img'
+              src={`https://starwars-visualguide.com/assets/img/characters/${id}.jpg`}
+              alt='person'
+            />
+          </div>
+          <div className='person_info  col-md-6 col-sm-12 '>
             <div className='person_name'>
               <h2>{name}</h2>
             </div>

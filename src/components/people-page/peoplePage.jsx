@@ -6,9 +6,16 @@ function PeoplePage(props) {
   return (
     <div className='people_page'>
       <div className='container'>
-        <div className='people_page_inner'>
-          <ItemList onItemSelected={props.onItemSelected} />
-          <PersonDetails personId={props.personId} />
+        <div className='row people_page_inner'>
+          <div className='col-lg-6 col-md-12'>
+            <ItemList
+              getData={props.getData}
+              onItemSelected={props.onItemSelected}
+            />
+          </div>
+          <div className='col-lg-6 col-md-12'>
+            <PersonDetails personId={props.personId} />
+          </div>
         </div>
       </div>
     </div>

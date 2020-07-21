@@ -1,27 +1,21 @@
-.personDetails {
-  max-width: 50%;
-}
 .personDetails_inner {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  flex-wrap: wrap;
   background-color: rgba(255, 255, 255, 0.1);
   padding: 20px;
+  margin: 15px 0;
   border-radius: 10px;
+  width: 100%;
 }
 
 .person_img {
-  max-width: 40%;
+  width: 100%;
   border-radius: 10px;
-  margin-right: 30px;
 }
 
 .person_info {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  max-width: 50%;
+  width: 100%;
 }
 
 .person_param {

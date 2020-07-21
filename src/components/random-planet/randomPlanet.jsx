@@ -59,11 +59,13 @@ const PlanetView = ({ planet }) => {
   const { id, name, population, rotationPeriod, diameter } = planet;
   return (
     <>
-      <img
-        className='planet_img'
-        src={`https://starwars-visualguide.com/assets/img/planets/${id}.jpg`}
-        alt='planet'
-      />
+      <div className='planet_img_container'>
+        <img
+          className='planet_img'
+          src={`https://starwars-visualguide.com/assets/img/planets/${id}.jpg`}
+          alt='planet'
+        />
+      </div>
       <div className='planet_info'>
         <div className='planet_name'>
           <h2>{name}</h2>

@@ -11,30 +11,30 @@ class SwapiService {
     }
   }
 
-  async getAllPeople() {
+  getAllPeople = async () => {
     const res = await this.getDB(`/people/`);
     return res.results.map(this._transformPerson);
-  }
-  async getPerson(id) {
+  };
+  getPerson = async id => {
     const person = await this.getDB(`/people/${id}/`);
     return this._transformPerson(person);
-  }
-  async getAllPlanets() {
+  };
+  getAllPlanets = async () => {
     const res = await this.getDB(`/planets/`);
     return res.results.map(this._transformPlanet);
-  }
-  async getPlanet(id) {
+  };
+  getPlanet = async id => {
     const planet = await this.getDB(`/planets/${id}/`);
     return this._transformPlanet(planet);
-  }
-  async getAllStarships() {
+  };
+  getAllStarships = async () => {
     const res = await this.getDB(`/starships/`);
     return res.results.map(this._transformStarships);
-  }
-  async getStarship(id) {
+  };
+  getStarship = async id => {
     const starship = await this.getDB(`/starships/${id}/`);
     return this._transformStarships(starship);
-  }
+  };
 
   _extractId(item) {
     const idReg = /\/([0-9]*)\/$/;

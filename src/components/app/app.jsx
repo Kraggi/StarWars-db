@@ -1,10 +1,11 @@
 import React from 'react';
 import Header from '../header/header';
 import RandomPlanet from '../random-planet/randomPlanet';
-import ItemList from '../item-list/itemList';
 import PeoplePage from '../people-page/peoplePage';
+import SwapiService from '../../services/swapi-servise';
 
 class App extends React.Component {
+  swapiService = new SwapiService();
   state = {
     selectedPerson: 11,
   };
@@ -19,7 +20,13 @@ class App extends React.Component {
         <PeoplePage
           onItemSelected={this.onPersonSelected}
           personId={this.state.selectedPerson}
+          getData={this.swapiService.getAllPeople}
         />
+        {/* <PeoplePage
+          onItemSelected={this.onPersonSelected}
+          personId={this.state.selectedPerson}
+          getData={this.swapiService.getAllPlanets}
+        /> */}
       </>
     );
   }

@@ -5,14 +5,13 @@ import SwapiService from '../../services/swapi-servise';
 import Spinner from '../spinner/spinner';
 
 class ItemList extends React.Component {
-  swapiService = new SwapiService();
-
   state = {
     peopleList: null,
   };
-
   componentDidMount() {
-    this.swapiService.getAllPeople().then(peopleList => {
+    const { getData } = this.props;
+
+    getData().then(peopleList => {
       this.setState({ peopleList });
     });
   }
