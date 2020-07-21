@@ -17,7 +17,7 @@
   border-radius: 10px;
 }
 
-.planet_info {
+.planet_info_random {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -37,4 +37,12 @@
   justify-content: center;
   align-items: center;
   width: 100%;
+}
+
+/* Media */
+
+@media screen and (max-width: 992px) {
+  .randomPlanet_inner {
+    justify-content: center;
+  }
 }

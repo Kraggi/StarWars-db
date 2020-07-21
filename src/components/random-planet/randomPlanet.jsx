@@ -66,7 +66,7 @@ const PlanetView = ({ planet }) => {
           alt='planet'
         />
       </div>
-      <div className='planet_info'>
+      <div className='.planet_info_random'>
         <div className='planet_name'>
           <h2>{name}</h2>
         </div>

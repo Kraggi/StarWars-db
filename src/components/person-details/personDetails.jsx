@@ -33,7 +33,6 @@ class PersonDetails extends React.Component {
       return <Spinner />;
     }
     const { id, name, gender, birthYear, eyeColor } = this.state.person;
-    console.log(this.state);
     return (
       <div className='personDetails'>
         <div className='personDetails_inner row'>

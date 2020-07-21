@@ -38,3 +38,68 @@ h6 {
 .menu_item {
   margin-left: 30px;
 }
+
+.burger {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  height: 40px;
+  display: none;
+}
+
+.burger_menu {
+  width: 40px;
+  height: 5px;
+  border-radius: 5px;
+  background-color: #1d7963;
+  position: relative;
+}
+.burger_menu::before {
+  content: '';
+  position: absolute;
+  top: -10px;
+  width: 40px;
+  height: 5px;
+  border-radius: 5px;
+  background-color: #1d7963;
+}
+.burger_menu::after {
+  content: '';
+  position: absolute;
+  top: 10px;
+  width: 40px;
+  height: 5px;
+  border-radius: 5px;
+  background-color: #1d7963;
+}
+
+.burger_list {
+  border-radius: 5px;
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.7);
+  position: absolute;
+  font-size: 36px;
+
+  top: 25px;
+  left: -125px;
+  display: none;
+}
+
+.burger_show {
+  display: block;
+}
+/* Media */
+
+@media screen and (max-width: 530px) {
+  .header_inner {
+    display: flex;
+    justify-content: space-between;
+  }
+  .menu_list {
+    display: none;
+  }
+  .burger {
+    display: flex;
+  }
+}
